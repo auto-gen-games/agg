@@ -4,15 +4,12 @@ import java.util.List;
 
 public class Test {
     public static void main (String[] arguments) {
-        System.out.println ("=====");
-        System.out.flush ();
         int width = 20, breadth = 20, depth = 20, seaBed = 5, seaLevel = 10, numPlates = 4;
         CellGenerator generator = new BaseCellGenerator (seaLevel, seaBed);
         ShallowWorld world = new ShallowWorld (width, breadth, depth, generator);
         List<Plate> plates = PlateGenerator.generatePlates (world, seaBed, numPlates);
         Position position;
 
-        System.out.println ("----");
         for (int y = 0; y < breadth; y += 1) {
             for (int x = 0; x < width; x += 1) {
                 position = new Position (x, y, seaBed);
