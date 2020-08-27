@@ -1,3 +1,3 @@
-# Game auto-generation utilities
+# Islands generator
 
-Currently just generating islands for a map (in Java).
+Generate a map of islands (in Java).
